@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController(request) {
+  function MainController(request, $log) {
     var vm = this;
 
     vm.listBooks = [];
@@ -20,13 +20,14 @@
     }
 
     function click(id) {
-      console.log('click');
-    };
+      $log.info('click '+id);
+    }
 
     function getListBooks() {
       request.listBooks.query({}, function(data) {
         vm.listBooks = data;
       });
     }
+
   }
 })();
