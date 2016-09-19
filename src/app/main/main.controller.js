@@ -6,27 +6,20 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController(request, $log) {
+  function MainController(listBookService, $state) {
+
     var vm = this;
-
     vm.listBooks = [];
-
     vm.click = click;
 
     activate();
 
     function activate() {
-      getListBooks();
+      vm.listBooks = listBookService.getListBook();
     }
 
     function click(id) {
-      $log.info('click '+id);
-    }
-
-    function getListBooks() {
-      request.listBooks.query({}, function(data) {
-        vm.listBooks = data;
-      });
+      $state.go('bookDetail', {id: id});
     }
 
   }

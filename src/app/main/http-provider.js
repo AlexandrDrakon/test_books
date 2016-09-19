@@ -1,4 +1,3 @@
-/*
 (function() {
   'use strict';
 
@@ -6,22 +5,26 @@
     .module('testBooks')
     .config(httpProviderConfig);
 
-  /!** @ngInject *!/
+  /** @ngInject */
   function httpProviderConfig($httpProvider) {
 
     $httpProvider.interceptors.push(function() {
       return {
         'request': function(config) {
 
+          return config;
         },
         'requestError': function(rejection) {
+          debugger;
 
         },
         'response': function(response) {
 
+          return response;
         },
         'responseError': function(rejection) {
-          //debugger;
+          debugger;
+
         }
       }
     });
@@ -29,4 +32,3 @@
   }
 
 })();
-*/

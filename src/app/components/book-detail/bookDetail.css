@@ -1,0 +1,8 @@
+.book-detail {
+  font-size: 14px;
+}
+
+.book-detail h1,h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}

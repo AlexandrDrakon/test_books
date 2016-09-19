@@ -1,10 +1,11 @@
-/* global malarkey:false, moment:false */
 (function() {
   'use strict';
 
   angular
     .module('testBooks')
-    .constant('malarkey', malarkey)
-    .constant('moment', moment);
+    .constant('baseUrl', {
+      content: 'https://ds.aggregion.com/api',
+      fileStorage: 'https://storage.aggregion.com/api'
+    });
 
 })();
