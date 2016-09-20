@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('testBooks', ['ui.router', 'ngResource', 'ngMaterial', 'bookDetail']);
+    .module('testBooks', ['ui.router', 'ngResource', 'ngMaterial', 'bookDetail', 'errors']);
 
 })();

@@ -7,7 +7,7 @@
   <md-list>
     <md-subheader>List of bundles book:</md-subheader>
     <md-list-item ng-repeat="bundle in book.bundles">
-      <a ng-href="https://storage.aggregion.com/api/files/{{bundle.resourceId}}/shared/data">
+      <a ng-href="https://storage.aggregion.com/api/files/{{bundle.resourceId}}/shared/data" download target="_blank">
         <p>{{bundle.id}}</p>
       </a>
     </md-list-item>
